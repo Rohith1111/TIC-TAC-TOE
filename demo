@@ -1,0 +1,68 @@
+print("TIC TAC TOE")
+print("what do you like to choose  X or O to play")
+CH=input()
+d={'1':'1','2':'2','3':'3','4':'4','5':'5','6':'6','7':'7','8':'8','9':'9'}
+PA=''
+PB=''
+if(CH=='X'):
+    PA='X'
+    PB='O'
+else:
+    PA='O'
+    PB='X'
+cnt=0
+f=0
+t=0
+while(1):
+    if(t==9):
+        print('DRAW Match')
+        break
+    print(' __________________________')
+    print('|        |        |        |')
+    print('|   ',end='')
+    print('{s}'.format(s=d['1']),end='')
+    print('    |    ',end='')
+    print('{s}'.format(s=d['2']),end='')
+    print('   |   ',end='')
+    print('{s}'.format(s=d['3']),end='')
+    print('    |')
+    print('|________|________|________|')
+    print('|        |        |        |')
+    print('|   ',end='')
+    print('{s}'.format(s=d['4']),end='')
+    print('    |    ',end='')
+    print('{s}'.format(s=d['5']),end='')
+    print('   |   ',end='')
+    print('{s}'.format(s=d['6']),end='')
+    print('    |')
+    print('|________|________|________|')
+    print('|        |        |        |')
+    print('|   ',end='')
+    print('{s}'.format(s=d['7']),end='')
+    print('    |    ',end='')
+    print('{s}'.format(s=d['8']),end='')
+    print('   |   ',end='')
+    print('{s}'.format(s=d['9']),end='')
+    print('    |')
+    print('|________|________|________|')
+    print('select the position you want to enter')
+    if( (d['1']=='X'and d['2']=='X' and d['3']=='X') or (d['4']=='X' and d['5']=='X' and d['6']=='X') or (d['7']=='X' and d['8']=='X' and d['9']=='X') or (d['1']=='X' and d['4']=='X' and d['7']=='X') or (d['2']=='X' and d['5']=='X' and d['8']=='X') or (d['3']=='X' and d['6']=='X' and d['9']=='X') or (d['1']=='X' and d['5']=='X' and d['9']=='X') or (d['3']=='X' and d['5']=='X' and d['7']=='X')):
+        f=1
+    if( (d['1']=='O'and d['2']=='O' and d['3']=='O') or (d['4']=='O' and d['5']=='O' and d['6']=='O') or (d['7']=='O' and d['8']=='O' and d['9']=='O') or (d['1']=='O' and d['4']=='O' and d['7']=='O') or (d['2']=='O' and d['5']=='O' and d['8']=='O') or (d['3']=='O' and d['6']=='O' and d['9']=='O') or (d['1']=='O' and d['5']=='O' and d['9']=='O') or (d['3']=='O' and d['5']=='O' and d['7']=='O')):
+        f=2
+    if(f==1):
+        print('X won')
+        break
+    if(f==2):
+        print('O won')
+        break
+    pos=input()
+    if(cnt%2==0):
+        d[pos]=PA
+    else:
+        d[pos]=PB
+    
+    
+    
+    t+=1
+    cnt+=1
